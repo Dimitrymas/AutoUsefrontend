@@ -8,9 +8,7 @@ import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 import Profile from "./pages/Profile";
 import Admin from "./pages/Admin";
-import DragonMoney from "./pages/DragonMoney";
-import EzCash from "./pages/EzCash";
-import Zooma from "./pages/Zooma";
+import Casino from "./pages/Casino";
 
 class App extends React.Component {
 
@@ -119,13 +117,13 @@ class App extends React.Component {
                            <Navigate replace to={"/"}/>}/>
                 }
                 <Route exact path="/product/dragonmoney"
-                       element={<DragonMoney makeRequest={this.makeRequest}/>}/>
+                       element={<Casino type={"dragonMoney"} makeRequest={this.makeRequest}/>}/>
                 }
                 <Route exact path="/product/zooma"
-                       element={<Zooma makeRequest={this.makeRequest} />}/>
+                       element={<Casino type={"zooma"} makeRequest={this.makeRequest} />}/>
                 }
                 <Route exact path="/product/ezcash"
-                       element={<EzCash makeRequest={this.makeRequest}/>}/>
+                       element={<Casino type={"ezCash"} makeRequest={this.makeRequest}/>}/>
                 }
 
             </Routes>

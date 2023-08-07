@@ -45,12 +45,10 @@ class Login extends React.Component {
                     <form onSubmit={(e) => this.handleSubmit(e)} className="lgrg-div-i">
                         <h1 className="login-registration-title">Войти</h1>
                         <p style={{width: "100%", textAlign: "center", marginBottom: "0"}}>{this.state.error}</p>
-                        <p className="mb-2 lgrg-q">Новый пользователь? <Link to={'/registration'}
-                                                                             style={{
-                                                                                 color: '#271155',
-                                                                                 fontWeight: "500"
-                                                                             }}>Создать
-                            учетную записть</Link></p>
+                        <p className="mb-2 lgrg-q">Новый пользователь?
+                            <Link to={'/registration'} style={{color: '#271155', fontWeight: "500"}}>Создать учетную
+                                записть</Link>
+                        </p>
                         <label htmlFor="inputLogin" className="lgrg-label">Логин</label>
                         <input type="text" onChange={(e) => this.setState({login: e.target.value})}
                                className="form-control inp" id="inputLogin"/>

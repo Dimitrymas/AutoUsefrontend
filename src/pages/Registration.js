@@ -53,7 +53,7 @@ class Login extends React.Component {
                                                                              style={{
                                                                                  color: '#271155',
                                                                                  fontWeight: "500"
-                                                                             }}>Ввойти в аккаунт</Link></p>
+                                                                             }}>Войти в аккаунт</Link></p>
                         <label htmlFor="inputLogin" className="lgrg-label">Логин</label>
                         <input type="text" onChange={(e) => this.setState({login: e.target.value})}
                                className="form-control inp" id="inputLogin"/>

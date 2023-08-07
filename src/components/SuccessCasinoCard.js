@@ -1,6 +1,6 @@
 import React from "react";
-import PromocodeBox from "./PromocodeBox";
-import ChannelBox from "./ChannelBox";
+import PromoCodeChannelBox from "./PromoCodeChannelBox";
+
 import PCBox from "./PCBox";
 
 
@@ -122,18 +122,19 @@ class SuccessCasinoCard extends React.Component {
                     <div className="casino-card-in justify-content-center row">
                         <div className="col-12 col-lg-5 casino-columns">
                             <div className="casino-box casino-left-box">
-                                <PromocodeBox error={this.state.errorPromoCode} promoCodes={this.state.promoCodes}
-                                              handleDelete={this.deletePromoCode}
-                                              handleCreate={this.createPromoCode}/>
+                                <PromoCodeChannelBox caption={"Бан лист промокод"} type={"promoCode"} error={this.state.errorPromoCode} els={this.state.promoCodes}
+                                                     handleDelete={this.deletePromoCode}
+                                                     handleCreate={this.createPromoCode}/>
                             </div>
                         </div>
                         <div className="col-12 col-lg-5 casino-columns">
-                            <div className="casino-box">
-                                <ChannelBox error={this.state.errorChannel} channels={this.state.channels}
+                            <div className="casino-box casino-right-box">
+                                <PromoCodeChannelBox caption={"Список каналов"} type={"channel"} error={this.state.errorChannel} els={this.state.channels}
                                             handleDelete={this.deleteChannel}
                                             handleCreate={this.createChannel}/>
+
                             </div>
-                            <div className="casino-box">
+                            <div className="casino-box casino-right-box">
                                 <PCBox error={this.state.errorPC} handleDelete={this.deletePC}
                                        hwids={this.state.hwids}/>
                             </div>

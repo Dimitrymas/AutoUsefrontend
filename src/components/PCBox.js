@@ -1,5 +1,5 @@
 import React from "react";
-import PCRow from "./PCRow";
+import CasinoRow from "./CasinoRow";
 
 
 class PCBox extends React.Component {
@@ -10,7 +10,7 @@ class PCBox extends React.Component {
                 <h6 style={{textAlign: "center"}}>{this.props.error}</h6>
                 <div className="casino-place">
                     {this.props.hwids.map((element) => (
-                        <PCRow hwid={element} handleDelete={this.props.handleDelete}/>
+                        <CasinoRow type={"name"} el={element} handleDelete={this.props.handleDelete}/>
                     ))}
                 </div>
             </div>
