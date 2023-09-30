@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 class NavBarPanel extends React.Component {
     render() {
         return (<>
-                <nav className="col-11 navbar navbar-expand-lg navbar-dark">
+                <nav className="navbar navbar-expand-lg navbar-dark">
                     <Link className="navbar-brand" to="/">Главная страница</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
