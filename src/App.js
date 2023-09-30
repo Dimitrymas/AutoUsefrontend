@@ -14,9 +14,8 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-        axios.defaults.baseURL = 'https://auto-use.ru:4000/api'
+        axios.defaults.baseURL = 'https://auto-use.ru/api'
         const accessToken = localStorage.getItem('accessToken')
-
         this.state = {isLoggedIn: Boolean(accessToken), isAdmin: ""}
 
         if (accessToken) {
@@ -99,14 +98,14 @@ class App extends React.Component {
             <Routes>
                 <Route exact path="/" element={<Base/>}/>
 
-                <Route exact path="/login"
+                <Route exact path="/user/login"
                        element={!this.state.isLoggedIn ? <Login handleLogin={this.handleLogin}/> :
                            <Navigate replace to={"/"}/>}/>
-                <Route exact path="/registration"
+                <Route exact path="/user/registration"
                        element={!this.state.isLoggedIn ? <Registration handleLogin={this.handleLogin}/> :
                            <Navigate replace to={"/"}/>}/>
 
-                <Route exact path="/profile"
+                <Route exact path="/user/profile"
                        element={this.state.isLoggedIn ?
                            <Profile makeRequest={this.makeRequest} logout={this.handleLogout}/> :
                            <Navigate replace to={"/"}/>}/>
